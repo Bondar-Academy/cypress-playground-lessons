@@ -68,7 +68,7 @@ it('Parent Elements', () => {
     cy.get('#inputEmail1').parentsUntil('nb-card-body').find('button')
 })
 
-it.only('Cypress Chains', () => {
+it('Cypress Chains', () => {
     cy.get('#inputEmail1')
         .parents('form')
         .find('button')
@@ -79,4 +79,8 @@ it.only('Cypress Chains', () => {
         .find('nb-radio')
         .first()
         .should('have.text', 'Option 1')
+})
+
+it.only('Reusing Locators', () => {
+    
 })
