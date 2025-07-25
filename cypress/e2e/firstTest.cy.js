@@ -59,11 +59,15 @@ it('Child Elements', () => {
     cy.get('nb-card > nb-card-body [placeholder="Jane Doe"]')
 })
 
-it.only('Parent Elements', () => {
+it('Parent Elements', () => {
 
     cy.get('#inputEmail1').parents('form').find('button')
 
     cy.contains('Using the Grid').parent().find('button')
 
     cy.get('#inputEmail1').parentsUntil('nb-card-body').find('button')
+})
+
+it.only('Cypress Chains', () => {
+
 })
