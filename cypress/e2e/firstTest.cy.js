@@ -48,7 +48,7 @@ it('Cypress Locator Methods', () => {
     cy.contains('nb-card', 'Horizontal form').get('button')
 })
 
-it.only('Child Elements', () => {
+it('Child Elements', () => {
 
     cy.contains('nb-card', 'Using the Grid').find('.row').find('button')
 
@@ -57,4 +57,8 @@ it.only('Child Elements', () => {
     cy.get('nb-card nb-radio-group').contains('Option 1')
 
     cy.get('nb-card > nb-card-body [placeholder="Jane Doe"]')
+})
+
+it.only('Parent Elements', () => {
+    
 })
