@@ -35,7 +35,7 @@ it('Hello world 1', () => {
 
 })
 
-it.only('Cypress Locator Methods', () => {
+it('Cypress Locator Methods', () => {
     //Theory
     //get() - to find elments on the page globally
     //find() - to find only child elements
@@ -46,6 +46,15 @@ it.only('Cypress Locator Methods', () => {
     cy.contains('nb-card', 'Horizontal form').find('button')
     cy.contains('nb-card', 'Horizontal form').contains('Sign in')
     cy.contains('nb-card', 'Horizontal form').get('button')
+})
 
+it.only('Child Elements', () => {
 
+    cy.contains('nb-card', 'Using the Grid').find('.row').find('button')
+
+    cy.get('nb-card').find('nb-radio-group').contains('Option 1')
+
+    cy.get('nb-card nb-radio-group').contains('Option 1')
+
+    cy.get('nb-card > nb-card-body [placeholder="Jane Doe"]')
 })
