@@ -133,7 +133,7 @@ it('Extracting Values', () => {
     })
 })
 
-it.only('Assertions', () => {
+it('Assertions', () => {
 
     cy.get('[for="exampleInputEmail1"]').should('have.text', 'Email address')
 
@@ -145,5 +145,9 @@ it.only('Assertions', () => {
         expect(emailLabel).to.equal('Email address')
         cy.wrap(emailLabel).should('equal', 'Email address')
     })
+
+})
+
+it.only('Timeouts', () => {
 
 })
