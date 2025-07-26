@@ -106,7 +106,7 @@ it('Reusing Locators', () => {
 
 })
 
-it.only('Extracting Values', () => {
+it('Extracting Values', () => {
     // 1. using a JQuery method
     cy.get('[for="exampleInputEmail1"]').then( label => {
         const emailLabel = label.text()
@@ -131,4 +131,8 @@ it.only('Extracting Values', () => {
     cy.get('#exampleInputEmail1').invoke('prop', 'value').then( value => {
         console.log(value)
     })
+})
+
+it.only('Assertions', () => {
+
 })
