@@ -81,7 +81,7 @@ it('Cypress Chains', () => {
         .should('have.text', 'Option 1')
 })
 
-it.only('Reusing Locators', () => {
+it('Reusing Locators', () => {
 
     //THIS WILL NOT WORK!!! DON"T DO LIKE THIS!!!
     //const inputEmail1 = cy.get('#inputEmail1')
@@ -103,5 +103,9 @@ it.only('Reusing Locators', () => {
     })
 
     cy.get('@inputEmail2').click()
+
+})
+
+it.only('Extracting Values', () => {
 
 })
