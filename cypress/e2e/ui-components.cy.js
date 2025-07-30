@@ -9,11 +9,11 @@ it('input fields', () => {
     cy.contains('Form Layouts').click()
 
     const name = 'Artem'
-    cy.get('#inputEmail1').type('hello@test.com', {delay: 200}).clear().type('hello').clear()
+    cy.get('#inputEmail1').type('hello@test.com', { delay: 200 }).clear().type('hello').clear()
     cy.contains('nb-card', 'Using the Grid').contains('Email').type(`${name}@test.com`)
 
     cy.get('#inputEmail1').should('not.have.value', '').clear().type('test@bondaracademy.com')
-    .press(Cypress.Keyboard.Keys.TAB)
+        .press(Cypress.Keyboard.Keys.TAB)
 
     cy.contains('Auth').click()
     cy.contains('Login').click()
@@ -23,5 +23,9 @@ it('input fields', () => {
 })
 
 it.only('radio buttons', () => {
+    cy.contains('Forms').click()
+    cy.contains('Form Layouts').click()
+
+    
 
 })
