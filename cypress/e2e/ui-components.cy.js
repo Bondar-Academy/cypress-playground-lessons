@@ -50,5 +50,4 @@ it.only('lists and dropdowns', () => {
     cy.contains('Toastr').click()
 
     
-
 })
