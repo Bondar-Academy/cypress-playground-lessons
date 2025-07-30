@@ -22,7 +22,7 @@ it('input fields', () => {
     cy.get('#input-password').type('Welcome{enter}')
 })
 
-it.only('radio buttons', () => {
+it('radio buttons', () => {
     cy.contains('Forms').click()
     cy.contains('Form Layouts').click()
 
@@ -34,5 +34,10 @@ it.only('radio buttons', () => {
     })
 
     cy.contains('nb-card', 'Using the Grid').contains('label', 'Option 1').find('input').check({force:true})
+})
+
+it.only('checkboxes', () => {
+    cy.contains('Modal & Overlays').click()
+    cy.contains('Toastr').click()
 
 })
