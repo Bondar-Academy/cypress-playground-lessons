@@ -148,7 +148,7 @@ it('Assertions', () => {
 
 })
 
-it.only('Timeouts', () => {
+it('Timeouts', () => {
     cy.contains('Modal & Overlays').click()
     cy.contains('Dialog').click()
 
