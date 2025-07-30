@@ -36,11 +36,19 @@ it('radio buttons', () => {
     cy.contains('nb-card', 'Using the Grid').contains('label', 'Option 1').find('input').check({force:true})
 })
 
-it.only('checkboxes', () => {
+it('checkboxes', () => {
     cy.contains('Modal & Overlays').click()
     cy.contains('Toastr').click()
 
     cy.get('[type="checkbox"]').check({force: true})
     cy.get('[type="checkbox"]').should('be.checked')
+
+})
+
+it.only('lists and dropdowns', () => {
+    cy.contains('Modal & Overlays').click()
+    cy.contains('Toastr').click()
+
+    
 
 })
