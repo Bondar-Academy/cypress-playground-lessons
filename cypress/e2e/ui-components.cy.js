@@ -62,7 +62,12 @@ it.only('lists and dropdowns', () => {
             if(index < list.length-1)
                 cy.wrap(dropdown).click()
         })
-
     })
-     
+})
+
+it.only('tooltips', () => {
+    cy.contains('Modal & Overlays').click()
+    cy.contains('Tooltip').click()
+
+    
 })
