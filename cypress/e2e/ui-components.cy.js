@@ -73,7 +73,7 @@ it('tooltips', () => {
     cy.get('nb-tooltip').should('have.text', 'This is a tooltip')
 })
 
-it.only('dialog boxes', () => {
+it('dialog boxes', () => {
     cy.contains('Tables & Data').click()
     cy.contains('Smart Table').click()
 
@@ -89,4 +89,8 @@ it.only('dialog boxes', () => {
     })
     cy.get('.nb-trash').first().click()
     cy.get('@dialogBox').should('be.calledWith', 'Are you sure you want to delete?')
+})
+
+it.only('web tables', () => {
+
 })
