@@ -45,7 +45,7 @@ it('checkboxes', () => {
 
 })
 
-it.only('lists and dropdowns', () => {
+it('lists and dropdowns', () => {
     cy.contains('Modal & Overlays').click()
     cy.contains('Toastr').click()
 
@@ -69,5 +69,6 @@ it.only('tooltips', () => {
     cy.contains('Modal & Overlays').click()
     cy.contains('Tooltip').click()
 
-    
+    cy.contains('button', 'Top').trigger('mouseenter')
+    cy.get('nb-tooltip').should('have.text', 'This is a tooltip')
 })
