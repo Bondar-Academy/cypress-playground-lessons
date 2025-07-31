@@ -92,5 +92,7 @@ it('dialog boxes', () => {
 })
 
 it.only('web tables', () => {
-
+    cy.contains('Tables & Data').click()
+    cy.contains('Smart Table').click()
+    
 })
