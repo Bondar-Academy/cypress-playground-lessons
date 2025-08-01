@@ -96,7 +96,7 @@ it('web tables', () => {
     cy.contains('Smart Table').click()
 
     //1. How to find by text
-    cy.get('tbody').contains('tr', 'Larry').then( tableRow => {
+    cy.get('tbody').contains('tr', 'Larry').then(tableRow => {
         cy.wrap(tableRow).find('.nb-edit').click()
         cy.wrap(tableRow).find('[placeholder="Age"]').clear().type('35')
         cy.wrap(tableRow).find('.nb-checkmark').click()
@@ -111,7 +111,7 @@ it('web tables', () => {
         cy.wrap(tableRow).find('.nb-checkmark').click()
     })
 
-    cy.get('tbody tr').first().find('td').then( tableColumns => {
+    cy.get('tbody tr').first().find('td').then(tableColumns => {
         cy.wrap(tableColumns).eq(2).should('have.text', 'John')
         cy.wrap(tableColumns).eq(3).should('have.text', 'Smith')
     })
@@ -135,5 +135,15 @@ it('web tables', () => {
 it.only('datepickers', () => {
     cy.contains('Forms').click()
     cy.contains('Datepicker').click()
-    
+
+    let date = new Date()
+    date.setDate(date.getDate() + 50)
+    let futureDay = date.getDate()
+    let dateToAssert = `Aug ${futureDay}, 2025`
+
+    cy.get('[placeholder="Form Picker"]').then(input => {
+        cy.wrap(input).click()
+        cy.get('.day-cell').not('.bounding-month').contains(futureDay).click()
+        cy.wrap(input).should('have.value', dateToAssert)
+    })
 })
