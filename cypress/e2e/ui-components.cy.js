@@ -132,11 +132,9 @@ it('web tables', () => {
     })
 })
 
-it.only('datepickers', () => {
+it('datepickers', () => {
     cy.contains('Forms').click()
     cy.contains('Datepicker').click()
-
-
 
     function selectDateFromCurrentDay(day) {
         let date = new Date()
@@ -163,4 +161,9 @@ it.only('datepickers', () => {
         const dateToAssert = selectDateFromCurrentDay(20)
         cy.wrap(input).should('have.value', dateToAssert)
     })
+})
+
+it.only('sliders', () => {
+    
+
 })
