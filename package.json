@@ -4,6 +4,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "cypress": "https://cdn.cypress.io/beta/npm/15.0.0/darwin-arm64/release/15.0.0-cb49fdd6df5da94d0dff6272ae7e190033a40a67/cypress.tgz"
+    "cypress": "^15.0.0"
   }
 }

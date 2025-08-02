@@ -171,11 +171,18 @@ it('sliders', () => {
     cy.get('[class="value temperature h1"]').should('contain.text', '18')
 })
 
-it.only('drag and drop', () => {
+it('drag and drop', () => {
     cy.contains('Extra Components').click()
     cy.contains('Drag & Drop').click()
 
     cy.get('#todo-list div').first().trigger('dragstart')
     cy.get('#drop-list').trigger('drop')
+
+})
+
+it.only('iframes', () => {
+    cy.contains('Modal & Overlays').click()
+    cy.contains('Dialog').click()
+
 
 })
